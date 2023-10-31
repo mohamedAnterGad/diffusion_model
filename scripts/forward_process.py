@@ -52,8 +52,8 @@ beta = np.linspace(beta_start, beta_end, num=timesteps, dtype=np.float32)
 
 
 processed_images = []
-img_t = np.asarray(img.copy(), dtype=np.float32) / 255.
-
+#img_t = np.asarray(img.copy(), dtype=np.float32) / 255.
+img_t =  np.asarray(img.copy(), dtype=np.float32) /255
 # 5. Run the forward process to obtain img after t timesteps
 for t in range(timesteps):
     img_t = forward_process_ddpms(img_t_minus_1=img_t, beta=beta, t=t)
